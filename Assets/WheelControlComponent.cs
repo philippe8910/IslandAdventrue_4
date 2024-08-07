@@ -19,7 +19,7 @@ public class WheelControlComponent : MonoBehaviour
     {
         //Debug.Log((360 - transform.rotation.eulerAngles.x) / rotationWeighted);
 
-        rockRoot.DORotateQuaternion(Quaternion.Euler(new Vector3(0 , ((360 - transform.rotation.eulerAngles.x) / rotationWeighted) , 0)) , 15f
+        rockRoot.DORotateQuaternion(Quaternion.Euler(new Vector3(0 , ((360 - transform.rotation.eulerAngles.y) / rotationWeighted) , 0)) , 15f
         ).SetEase(Ease.OutQuart);
     }
 }
