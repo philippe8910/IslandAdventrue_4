@@ -25,6 +25,14 @@ public class ActionBasedTriggerAction : MonoBehaviour
         rightHandTriggerAction.action.Disable();
     }
 
+    [ContextMenu("TriggerPressedTest")]
+    private void TriggerPressedTest()
+    {
+        // 触发按键按下时执行的函数
+        OnTriggerPressed?.Invoke();
+        Debug.Log("Right Trigger pressed!");
+    }
+
     private void OnTriggerPressedBinding(InputAction.CallbackContext context)
     {
         OnTriggerPressed?.Invoke();
