@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f144933b81fb204eac70712ee8e130c
+guid: 91c210b0d41e83c4b88b22b5507b3284
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: 01- background 1024
     second: {fileID: 2100000, guid: 7bf7f8bb2dc7dc747ad0105bd04b5da1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03- all 2048
+    second: {fileID: 2100000, guid: 5c7bd972be860f742b12af99bcb741c1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

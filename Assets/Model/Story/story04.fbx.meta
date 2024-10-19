@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f144933b81fb204eac70712ee8e130c
+guid: 1cbcb7fc014f1b84383e5cdd93faabeb
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 01- background 1024
-    second: {fileID: 2100000, guid: 7bf7f8bb2dc7dc747ad0105bd04b5da1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: story1
-    second: {fileID: 2100000, guid: 41f282ac401fc8143b4aaf9e54e2ac92, type: 2}
+      name: 04- all 2048
+    second: {fileID: 2100000, guid: f80c86bee00f25944bfbfa29e24f306c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
