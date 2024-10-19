@@ -52,7 +52,7 @@ public class ShipGeneratorComponent : MonoBehaviour
     private IEnumerator GenerateShip()
     {
         var shipPrefab = shipPrefabs[Random.Range(0, shipPrefabs.Count)];
-        var ship = Instantiate(shipPrefab, shipSpawnPoints[Random.Range(0 , shipSpawnPoints.Count)].position, Quaternion.identity);
+        var ship = Instantiate(shipPrefab, shipSpawnPoints[Random.Range(0 , shipSpawnPoints.Count)].position, shipPrefab.transform.rotation);
         
         ship.transform.parent = shipParent;
 

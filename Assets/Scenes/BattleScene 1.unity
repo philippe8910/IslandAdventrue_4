@@ -1821,7 +1821,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   shipPrefabs:
-  - {fileID: 2025382056442014706, guid: 68b431629c1bd8645aef8a1e6f021e67, type: 3}
+  - {fileID: 7368683787481627520, guid: 74d328d98c63bc342ace02894b4ae1f2, type: 3}
   shipSpawnPoints:
   - {fileID: 1256113028}
   - {fileID: 703471367}
