@@ -97,7 +97,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AdditionalLightCutoffPoint: 0.931
+    - _AdditionalLightCutoffPoint: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 0.58000004
@@ -112,26 +112,30 @@ Material:
     - _ExtraBandThickness: 0.3
     - _GlossMapScale: 1
     - _Glossiness: 0.5
+    - _GlossinessSource: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _PaintbrushStrokesAngle: 40
-    - _PaintbrushStrokesSize: 1
+    - _PaintbrushStrokesAngle: 0
+    - _PaintbrushStrokesSize: 0.01
     - _Parallax: 0.02
     - _QueueControl: -1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SHADING_STYLE: 0
-    - _ShadowsFloor: 0.5
-    - _Smoothness: 0.5
+    - _ShadowsFloor: 0.265
+    - _Shininess: 0
+    - _Smoothness: 1
+    - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
+    - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SpecularNoiseSize: 1
     - _SrcBlend: 1
-    - _StrongRimStrength: 0.502
+    - _StrongRimStrength: 0
     - _Surface: 0
-    - _ToonCutoffPoint: 0.136
+    - _ToonCutoffPoint: 0.01
     - _UVSec: 0
     - _UseEmission: 0
     - _WorkflowMode: 1
