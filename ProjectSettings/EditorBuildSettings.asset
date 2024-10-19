@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 4c47c0c5e717d425d8886a8c68544078
   - enabled: 1
+    path: Assets/Scenes/AdventrueSceneT.unity
+    guid: b226c92542936c943823d8527a40ac83
+  - enabled: 1
     path: Assets/Scenes/AdventrueScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/BattleSceneT.unity
+    guid: cf175cd8b84fdc24fa455785363d1bbf
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
     guid: 28b0670ebcf0c4f6cabec054cd043afc
