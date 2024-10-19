@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 4c47c0c5e717d425d8886a8c68544078
+    path: Assets/Scenes/Story.unity
+    guid: 8a21dadbab09d1b4fab0c004d68cfd21
   - enabled: 1
     path: Assets/Scenes/AdventrueSceneT.unity
     guid: b226c92542936c943823d8527a40ac83
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
     guid: 28b0670ebcf0c4f6cabec054cd043afc
+  - enabled: 1
+    path: Assets/Scenes/SearchSceneT.unity
+    guid: e140a3a105d2b9c48978f55a52923ade
   - enabled: 1
     path: Assets/Scenes/SearchScene.unity
     guid: 0bab7d92c5b2e4f2d98ece904a95fbaf

@@ -711,7 +711,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &420545020
 MonoBehaviour:
@@ -2266,6 +2266,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4212429558192273927, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: onEndOfList.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1730819177}
+    - target: {fileID: 4212429558192273927, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: onEndOfList.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 4212429558313650407, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
       propertyPath: m_Name
       value: Quad
@@ -2399,6 +2407,11 @@ MonoBehaviour:
   - {fileID: 596836359}
   - {fileID: 1005347836}
   moveSpeed: 2
+  timer: 0
+  timeMax: 0
+  OnGameTimeEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1705063428
 Transform:
   m_ObjectHideFlags: 0
@@ -2546,6 +2559,29 @@ Transform:
 --- !u!4 &1730819174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4363726554158705974, guid: 0fe2fb11f343e492f8ca8000cba5efb1, type: 3}
+  m_PrefabInstance: {fileID: 1730819172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1730819175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1242614631, guid: 0fe2fb11f343e492f8ca8000cba5efb1, type: 3}
+  m_PrefabInstance: {fileID: 1730819172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1730819176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730819175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f7f8d8c79b4624abd0df06808ea20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAuto: 1
+--- !u!95 &1730819177 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1242614637, guid: 0fe2fb11f343e492f8ca8000cba5efb1, type: 3}
   m_PrefabInstance: {fileID: 1730819172}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765482213
