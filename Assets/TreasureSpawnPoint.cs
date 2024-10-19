@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TreasureSpawnPoint : MonoBehaviour
 {
@@ -9,9 +10,24 @@ public class TreasureSpawnPoint : MonoBehaviour
     private int spawnCounter = 0; // 生成计数器
     public float moveSpeed = 2f; // 移动速度
 
+    public float timer, timeMax;
+
+    [SerializeField] private UnityEvent OnGameTimeEnd;
+
     private void Start()
     {
         StartCoroutine(SpawnPrefabCoroutine()); // 启动协程
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+
+        if(timer > timeMax)
+        {
+            OnGameTimeEnd.Invoke();
+            timer = 0;
+        }
     }
 
     // 协程，用于每两秒生成一个 Prefab
