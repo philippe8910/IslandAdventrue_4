@@ -77,5 +77,7 @@ public class TreasureSpawnPoint : MonoBehaviour
             obj.transform.position = Vector3.MoveTowards(obj.transform.position, targetPosition, moveSpeed * Time.deltaTime);
             yield return null; // 等待下一帧
         }
+
+        obj.GetComponent<FloatComponent>().enabled = true;
     }
 }
