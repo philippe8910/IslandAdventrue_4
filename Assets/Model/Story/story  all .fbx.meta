@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f144933b81fb204eac70712ee8e130c
+guid: d575a52a21918634892a5594cf4f1f6a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -12,8 +12,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: story1
-    second: {fileID: 2100000, guid: 41f282ac401fc8143b4aaf9e54e2ac92, type: 2}
+      name: 01-all2048
+    second: {fileID: 2100000, guid: f12e86a0bec39ce4fb2fe61b324f22c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02- all 2048
+    second: {fileID: 2100000, guid: ccbdf3e3882a45a44aaa2b32dd87ead8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03- all 2048
+    second: {fileID: 2100000, guid: 5c7bd972be860f742b12af99bcb741c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 04- all 2048
+    second: {fileID: 2100000, guid: f80c86bee00f25944bfbfa29e24f306c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 05- all 2048
+    second: {fileID: 2100000, guid: 97a0e80f47cc44b49bc2e6b5c0e7e932, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balck
+    second: {fileID: 2100000, guid: 27fa2a644b9f96b4e850a1fa3ec072ff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
