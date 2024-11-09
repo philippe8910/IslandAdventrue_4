@@ -3840,6 +3840,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4212429558192273923, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212429558192273923, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212429558192273923, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.618
+      objectReference: {fileID: 0}
     - target: {fileID: 4212429558192273927, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
       propertyPath: stringList.Array.data[0]
       value: "\u984F\u5927\u54E5\uFF0C\u770B\u5230\u4E86\u90A3\u662F\u8377\u862D\u7684\u8239!"

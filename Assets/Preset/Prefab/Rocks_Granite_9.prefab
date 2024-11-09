@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8178267200301149731}
   - component: {fileID: -5784614761251752414}
   - component: {fileID: 4461727960515857855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rocks_Granite_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2446,6 +2446,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4212429558192273923, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212429558192273923, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.441
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212429558192273923, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.054
+      objectReference: {fileID: 0}
     - target: {fileID: 4212429558192273927, guid: fb47987d4c38d8e4291e9bbbbe5f3374, type: 3}
       propertyPath: onEndOfList.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
