@@ -16,6 +16,9 @@ public class TextList : MonoBehaviour
 
     public InputActionProperty playerControls;
 
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
+
     private void OnEnable()
     {
         playerControls.action.Enable();
@@ -34,6 +37,31 @@ public class TextList : MonoBehaviour
         {
             currentIndex++; // 切换到下一个字符串
             t.text = stringList[currentIndex];
+
+            audioSource.clip = audioClips[currentIndex];
+            audioSource.Play();
+
+            Debug.Log("Current String: " + stringList[currentIndex]);
+        }
+        else
+        {
+            onEndOfList.Invoke(); // 调用 UnityEvent
+            Debug.Log("Reached the end of the list.");
+        }
+    }
+
+    [ContextMenu("test")]
+    public void Test()
+    {
+        // 检查当前索引是否在有效范围内
+        if (currentIndex < stringList.Count)
+        {
+            currentIndex++; // 切换到下一个字符串
+            t.text = stringList[currentIndex];
+
+            audioSource.clip = audioClips[currentIndex];
+            audioSource.Play();
+
             Debug.Log("Current String: " + stringList[currentIndex]);
         }
         else
@@ -63,5 +91,9 @@ public class TextList : MonoBehaviour
         {
             Debug.Log("Current String: " + stringList[currentIndex]);
         }
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClips[0];
+        audioSource.Play();
     }
 }

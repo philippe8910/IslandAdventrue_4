@@ -10,9 +10,18 @@ public class TreasureSpawnPoint : MonoBehaviour
     private int spawnCounter = 0; // 生成计数器
     public float moveSpeed = 2f; // 移动速度
 
+    public bool isCapture = false;
+
     public float timer, timeMax;
 
     [SerializeField] private UnityEvent OnGameTimeEnd;
+
+    public static TreasureSpawnPoint Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -60,6 +69,15 @@ public class TreasureSpawnPoint : MonoBehaviour
             // 在 (spawnPoint.y - 5) 的位置生成 Prefab
             Vector3 spawnPosition = new Vector3(spawnPoint.position.x, spawnPoint.position.y - 5, spawnPoint.position.z);
             GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, spawnPoint.rotation);
+
+            spawnedObject.GetComponent<CaptureObjectComponent>().OnCaptured.AddListener(delegate { 
+                isCapture = true;
+            });
+
+            spawnedObject.GetComponent<CaptureObjectComponent>().OnReleased.AddListener(delegate {
+                isCapture = false;
+            });
+
             Debug.Log("Spawned: " + prefabToSpawn.name + " at " + spawnPosition);
 
             // 启动移动到生成点的协程

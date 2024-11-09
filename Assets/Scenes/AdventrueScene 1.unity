@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &11153998 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1242614637, guid: 0fe2fb11f343e492f8ca8000cba5efb1, type: 3}
+  m_PrefabInstance: {fileID: 4363726553449374534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &51367621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1303,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.26, z: 1}
+  m_Size: {x: 1, y: 6.18, z: 1}
   m_Center: {x: -4.01, y: 0, z: 0}
 --- !u!114 &637002866
 MonoBehaviour:
@@ -1580,7 +1585,7 @@ MonoBehaviour:
   OnGameTimeEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4363726553449374535}
+      - m_Target: {fileID: 11153998}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
         m_Mode: 5
@@ -1590,7 +1595,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: FadeOut
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &689264777
 GameObject:
@@ -2398,7 +2403,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4929b4b1fc787c849a312b2cbaa3b1d9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 99842e5e55c3eec428b6a2cfb165d44c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6620,11 +6625,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fe2fb11f343e492f8ca8000cba5efb1, type: 3}
---- !u!95 &4363726553449374535 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1242614637, guid: 0fe2fb11f343e492f8ca8000cba5efb1, type: 3}
-  m_PrefabInstance: {fileID: 4363726553449374534}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4363726553449374536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4363726552923745258, guid: 0fe2fb11f343e492f8ca8000cba5efb1, type: 3}
