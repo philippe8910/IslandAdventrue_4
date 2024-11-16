@@ -20,14 +20,14 @@ public class CaptureObjectComponent : MonoBehaviour
     [SerializeField] private bool isCaptured = false;
 
     private Vector3 previousControllerPosition;
-    private float detectionThreshold = 0.05f; // 调整这个值以控制检测灵敏度
+    private float detectionThreshold = 0.25f; // 调整这个值以控制检测灵敏度
 
     public int pullBackCount = 0;
 
 
     public bool isPull = false;
 
-    public UnityEvent OnCaptured, OnReleased;
+    public UnityEvent OnCaptured, OnReleased , OnPulled;
 
     private List<Vector3> posList = new List<Vector3>();
 
@@ -65,6 +65,7 @@ public class CaptureObjectComponent : MonoBehaviour
         // 檢測是否達到拉動的門檻
         if (movement.z < -detectionThreshold)
         {
+            OnPulled.Invoke();
             if (pullBackCount >= 3)
             {
                 

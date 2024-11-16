@@ -1000,7 +1000,7 @@ MonoBehaviour:
   effectPos: {fileID: 973346}
   moveLine: {fileID: 1538442100}
   bulletSpeed: 0.1
-  reloadTime: 1.5
+  reloadTime: 0.5
   audioSource: {fileID: 1845246345}
   reloading: 0
 --- !u!4 &483138101
@@ -1738,7 +1738,7 @@ MonoBehaviour:
   effectPos: {fileID: 1497045307}
   moveLine: {fileID: 1871661323}
   bulletSpeed: 0.1
-  reloadTime: 1.5
+  reloadTime: 0.5
   audioSource: {fileID: 1630221226}
   reloading: 0
 --- !u!114 &836399085
@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipParent: {fileID: 928383997}
-  gameTime: 30
+  gameTime: 50
   timer: 0
   levelHardCurve:
     serializedVersion: 2

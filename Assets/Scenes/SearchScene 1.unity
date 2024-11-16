@@ -1812,6 +1812,9 @@ MonoBehaviour:
   OnReleased:
     m_PersistentCalls:
       m_Calls: []
+  OnPulled:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &939720261
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2254,6 +2257,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPulled:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1202453592
@@ -2753,7 +2759,7 @@ MonoBehaviour:
   moveSpeed: 2
   isCapture: 0
   timer: 0
-  timeMax: 30
+  timeMax: 50
   OnGameTimeEnd:
     m_PersistentCalls:
       m_Calls:

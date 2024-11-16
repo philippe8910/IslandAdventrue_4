@@ -56,7 +56,7 @@ public class RocGeneratorComponent : MonoBehaviour
         
         roc.transform.parent = rocParent;
 
-        Destroy(roc, 15.0f);
+        Destroy(roc, 40.0f);
 
         yield return new WaitForSeconds(levelHardCurve.Evaluate(Time.time / gameTime));
 
