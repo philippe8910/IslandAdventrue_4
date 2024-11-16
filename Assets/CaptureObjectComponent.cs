@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CaptureObjectComponent : MonoBehaviour
 {
@@ -14,33 +15,46 @@ public class CaptureObjectComponent : MonoBehaviour
     [SerializeField] private Vector3 netOffset;
     [SerializeField] private Vector3 controllerStartPos;
 
+    [SerializeField] private GameObject effect;
+
     [SerializeField] private bool isCaptured = false;
 
     private Vector3 previousControllerPosition;
     private float detectionThreshold = 0.05f; // 调整这个值以控制检测灵敏度
 
+    public int pullBackCount = 0;
+
+
+    public bool isPull = false;
+
+    public UnityEvent OnCaptured, OnReleased;
+
+    private List<Vector3> posList = new List<Vector3>();
+
     void Start()
     {
         controllerTransform = GameObject.FindGameObjectWithTag("RightController").transform;
         collectPointTransform = GameObject.FindGameObjectWithTag("CollectPoint").transform;
-
-        
     }
 
+    float timer = 0;
 
-
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
     void Update()
     {
-        if (!isCaptured)
-            return;
-
-        //Debug.Log("Controller position: " + controllerTransform.position);
+        if (!isCaptured) return;
 
         DetectControllerPullBack();
         previousControllerPosition = controllerTransform.position;
+
+        if(isPull)
+        {
+            timer += Time.deltaTime;
+
+            if(timer >= 1)
+            {
+                isPull = false;
+            }
+        }
     }
 
     private void DetectControllerPullBack()
@@ -48,33 +62,53 @@ public class CaptureObjectComponent : MonoBehaviour
         Vector3 currentControllerPosition = controllerTransform.position;
         Vector3 movement = currentControllerPosition - previousControllerPosition;
 
-        Debug.Log("Controller movement: " + movement.z);
-
-        // 如果控制器在Z轴方向上的移动超过了阈值，触发事件
+        // 檢測是否達到拉動的門檻
         if (movement.z < -detectionThreshold)
         {
-            OnControllerPullBack();
+            if (pullBackCount >= 3)
+            {
+                
+            }
+            else
+            {
+                OnControllerPullBack();
+            }
         }
     }
 
     private void OnControllerPullBack()
     {
+        if (isPull)
+            return;
+
         Debug.Log("Controller pull back");
 
-        isCaptured = false;
-
-        transform.DOMove(collectPointTransform.position, 1.0f).SetEase(Ease.InOutQuart).OnComplete(() =>
-        {
-            Destroy(gameObject);
-        });
+        Destroy(GetComponent<FloatComponent>());
+        transform.DOMove(posList[pullBackCount], 1.0f).SetEase(Ease.InOutQuart).onComplete += delegate { 
+            if(pullBackCount >= 3)
+            {
+                OnReleased.Invoke();
+                Destroy(Instantiate(effect, transform.position, transform.rotation), 1);
+                Destroy(gameObject);
+            }
+        };
+        isPull = true;
+        pullBackCount++;
     }
 
-    [ContextMenu("Capture")]
+    [ContextMenu("Test")]
     public void Capture()
     {
-        var net = Instantiate(netPrefab, transform.position + Vector3.up * 20, Quaternion.identity);
+        if (TreasureSpawnPoint.Instance.isCapture)
+            return;
 
+        var net = Instantiate(netPrefab, transform.position + Vector3.up * 20, Quaternion.identity);
         net.transform.parent = transform;
+
+        // 計算三次拉動的目標位置，距離逐步減少
+        posList.Add(transform.position + (collectPointTransform.position - transform.position) / 3 * 1);
+        posList.Add(transform.position + (collectPointTransform.position - transform.position) / 3 * 2);
+        posList.Add(collectPointTransform.position);
 
         net.transform.DOMove(transform.position + netOffset, 1.0f).SetEase(Ease.InOutQuart).OnComplete(() =>
         {
@@ -86,5 +120,7 @@ public class CaptureObjectComponent : MonoBehaviour
 
             isCaptured = true;
         });
+
+        OnCaptured.Invoke();
     }
 }

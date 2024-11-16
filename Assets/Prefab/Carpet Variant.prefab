@@ -120,4 +120,13 @@ MonoBehaviour:
   collectPointTransform: {fileID: 0}
   netOffset: {x: 0, y: -0.49, z: 0}
   controllerStartPos: {x: 0, y: 0, z: 0}
+  effect: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd, type: 3}
   isCaptured: 0
+  pullBackCount: 0
+  isPull: 0
+  OnCaptured:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReleased:
+    m_PersistentCalls:
+      m_Calls: []

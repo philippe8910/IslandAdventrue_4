@@ -177,8 +177,8 @@ MonoBehaviour:
   - {fileID: 4934239801237982636}
   - {fileID: -839592743450497995}
   - {fileID: -6550382602892954605}
-  m_renderMode: 1
-  m_depthSubmissionMode: 0
+  m_renderMode: 0
+  m_depthSubmissionMode: 1
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
 --- !u!114 &-7565788443743495085

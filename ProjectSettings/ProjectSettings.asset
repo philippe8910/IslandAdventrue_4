@@ -159,6 +159,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.IslandAdventure4
+    Standalone: com.DefaultCompany.IslandAdventure4
   buildNumber:
     Standalone: 0
     iPhone: 0
